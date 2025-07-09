@@ -1,0 +1,7 @@
+=======
+
+const OPENAI_API_KEY = process.env.REACT_APP_OPENAI_API_KEY; // Load API key from environment variable
+
+if (!OPENAI_API_KEY) {
+  console.warn('Warning: OpenAI API key is not set. Please set REACT_APP_OPENAI_API_KEY in your environment variables.');
+}

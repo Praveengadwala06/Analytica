@@ -1,0 +1,105 @@
+/* Global styles for headings and paragraphs */
+h1, h2, h3, h4, h5, h6, p {
+  color: white;
+}
+
+/* Neon orange glowing edge animation */
+@keyframes neonGlow {
+  0% {
+    box-shadow:
+      0 0 5px #ff6f00,
+      0 0 10px #ff6f00,
+      0 0 20px #ff6f00,
+      0 0 40px #ff6f00,
+      0 0 80px #ff6f00;
+  }
+  50% {
+    box-shadow:
+      0 0 10px #ff8c00,
+      0 0 20px #ff8c00,
+      0 0 30px #ff8c00,
+      0 0 50px #ff8c00,
+      0 0 100px #ff8c00;
+  }
+  100% {
+    box-shadow:
+      0 0 5px #ff6f00,
+      0 0 10px #ff6f00,
+      0 0 20px #ff6f00,
+      0 0 40px #ff6f00,
+      0 0 80px #ff6f00;
+  }
+}
+
+@keyframes moveGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes moveAround {
+  0% {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: none;
+  }
+  25% {
+    top: 0;
+    left: 100%;
+    width: 2px;
+    height: 100%;
+    transform: translateX(-100%);
+  }
+  50% {
+    top: 100%;
+    left: 100%;
+    width: 100%;
+    height: 2px;
+    transform: translateY(-100%);
+  }
+  75% {
+    top: 100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    transform: translateY(-100%);
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: none;
+  }
+}
+
+.moving-neon-edge {
+  position: relative;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.moving-neon-edge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.moving-neon-edge::before::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #ff6f00;
+  box-shadow: 0 0 15px #ff6f00;
+  animation: moveAround 4s linear infinite;
+}

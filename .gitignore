@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+
+# Cache folders
+client/node_modules/.cache/
+client/node_modules/.cache/default-development/
+server/node_modules/.cache/
+server/node_modules/.cache/default-development/
+
+# Build output
+client/build/
+client/dist/
+server/build/
+server/dist/
+
+# Logs
+*.log
+
+# Environment files
+.env

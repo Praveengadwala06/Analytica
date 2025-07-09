@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "social-analytics-dashboard-server": "file:.."
+  }
+}
